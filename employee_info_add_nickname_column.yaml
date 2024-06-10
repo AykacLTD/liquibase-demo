@@ -1,0 +1,13 @@
+databaseChangeLog:
+- changeSet:       # New changeset for adding the column
+    id: add-nickname-column  # A unique ID for this change
+    author: alperaykac        # Your name or identifier
+    changes:
+    - addColumn:
+        tableName: EMPLOYEE_INFO
+        columns:
+        - column:
+            name: nickname
+            type: TEXT         # Or the appropriate text type for your database
+            constraints:
+                nullable: true   # Makes the column nullable
