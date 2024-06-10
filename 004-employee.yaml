@@ -1,0 +1,28 @@
+databaseChangeLog:
+- changeSet:
+    id: 1718014985830-4
+    author: alperaykac (generated)
+    changes:
+    - createTable:
+        tableName: employee
+        columns:
+        - column:
+            name: id
+            type: BIGINT UNSIGNED
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              unique: true
+        - column:
+            name: name
+            type: VARCHAR(100)
+        - column:
+            name: manager_id
+            type: INT
+        - column:
+            name: salary
+            type: DECIMAL(10, 2)
+        - column:
+            name: designation
+            type: VARCHAR(50)

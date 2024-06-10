@@ -1,0 +1,104 @@
+databaseChangeLog:
+- changeSet:
+    id: 1718014985830-1
+    author: alperaykac (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+            name: empId
+            type: INT
+        - column:
+            constraints:
+              nullable: false
+            name: name
+            type: TEXT
+        - column:
+            constraints:
+              nullable: false
+            name: dept
+            type: TEXT
+        - column:
+            name: salary
+            type: DECIMAL(8, 2)
+        - column:
+            name: hire_date
+            type: date
+        tableName: EMPLOYEE_INFO
+- changeSet:
+    id: 1718014985830-2
+    author: alperaykac (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+            name: id
+            type: INT
+        - column:
+            name: model
+            type: VARCHAR(50)
+        - column:
+            name: brand
+            type: VARCHAR(50)
+        - column:
+            name: color
+            type: VARCHAR(50)
+        - column:
+            name: makeYear
+            type: INT
+        tableName: car
+- changeSet:
+    id: 1718014985830-3
+    author: alperaykac (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+            name: id
+            type: INT
+        - column:
+            name: first_name
+            type: VARCHAR(255)
+        - column:
+            name: last_name
+            type: VARCHAR(255)
+        tableName: customers
+- changeSet:
+    id: 1718014985830-4
+    author: alperaykac (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              unique: true
+            name: id
+            type: BIGINT UNSIGNED
+        - column:
+            name: name
+            type: VARCHAR(100)
+        - column:
+            name: manager_id
+            type: INT
+        - column:
+            name: salary
+            type: DECIMAL(10, 2)
+        - column:
+            name: designation
+            type: VARCHAR(50)
+        tableName: employee
+

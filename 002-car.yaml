@@ -1,0 +1,27 @@
+databaseChangeLog:
+- changeSet:
+    id: 1718014985830-2
+    author: alperaykac (generated)
+    changes:
+    - createTable:
+        tableName: car
+        columns:
+        - column:
+            name: id
+            type: INT
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+        - column:
+            name: model
+            type: VARCHAR(50)
+        - column:
+            name: brand
+            type: VARCHAR(50)
+        - column:
+            name: color
+            type: VARCHAR(50)
+        - column:
+            name: makeYear
+            type: INT

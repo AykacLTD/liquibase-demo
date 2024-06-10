@@ -1,0 +1,21 @@
+databaseChangeLog:
+- changeSet:
+    id: 1718014985830-3
+    author: alperaykac (generated)
+    changes:
+    - createTable:
+        tableName: customers
+        columns:
+        - column:
+            name: id
+            type: INT
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+        - column:
+            name: first_name
+            type: VARCHAR(255)
+        - column:
+            name: last_name
+            type: VARCHAR(255)
